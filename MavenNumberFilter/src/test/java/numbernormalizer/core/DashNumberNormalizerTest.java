@@ -46,11 +46,11 @@ public class DashNumberNormalizerTest {
     }
 
     @Test
-    @DisplayName("Should normalize valid 11 digit number")
+    @DisplayName("Should normalize valid 11 digit number when it has blank spaces before and after it")
     void test4() {
         //given
         normalizer = new DashNumberNormalizer();
-        var numberToNormalize = " 1234s678901 ";
+        var numberToNormalize = " 12345678901 ";
         //when
         var normalizedNumber = normalizer.normalize(numberToNormalize);
         //then

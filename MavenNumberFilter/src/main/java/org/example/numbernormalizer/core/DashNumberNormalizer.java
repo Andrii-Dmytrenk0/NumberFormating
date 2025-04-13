@@ -8,6 +8,7 @@ public class DashNumberNormalizer implements NumberNormalizer {
 
     @Override
     public String normalize(String numberToFormat) {
+        numberToFormat = numberToFormat.trim();
         validate(numberToFormat);
         var prefix = numberToFormat.substring(0,2) + "-";
         var rowNumber = numberToFormat.substring(2);
@@ -35,4 +36,6 @@ public class DashNumberNormalizer implements NumberNormalizer {
 
         return true;
     }
+
+
 }
